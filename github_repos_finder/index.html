@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find GitHub Repositories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Find GitHub Repositories</h1>
+        
+        <div class="filter-section">
+            <h2>Filters</h2>
+            
+            <label for="topics">Enter topics (comma-separated):</label>
+            <input type="text" id="topics" name="topics" placeholder="e.g., javascript,react">
+            
+            <label for="repoCount">Number of Repositories:</label>
+            <input type="number" id="repoCount" name="repoCount" min="1" max="100" value="10">
+            
+            <h3>Additional Filters:</h3>
+            
+            <!-- Additional Filters -->
+            
+            <label for="language">Language:</label>
+            <input type="text" id="language" name="language" placeholder="e.g., Python">
+            
+            <label for="stars">Minimum Stars:</label>
+            <input type="number" id="stars" name="stars" min="0" value="0">
+            
+            <label for="license">License:</label>
+            <input type="text" id="license" name="license" placeholder="e.g., MIT">
+            
+            <label for="createdAfter">Created After:</label>
+            <input type="date" id="createdAfter" name="createdAfter">
+            
+            <label for="updatedBefore">Updated Before:</label>
+            <input type="date" id="updatedBefore" name="updatedBefore">
+            
+            <label for="size">Maximum Size (KB):</label>
+            <input type="number" id="size" name="size" min="0" value="0">
+            
+            <label for="forks">Minimum Forks:</label>
+            <input type="number" id="forks" name="forks" min="0" value="0">
+            
+            <label for="archived">Archived:</label>
+            <input type="checkbox" id="archived" name="archived">
+            
+            <button id="searchButton">Search</button>
+        </div>
+        
+        <div id="repoList">
+            <!-- Repository results will be displayed here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
